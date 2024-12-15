@@ -465,13 +465,13 @@ a {
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
     }
     50% {
         text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
     }
     100% {
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
     }
 }
 
@@ -550,5 +550,27 @@ a {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fa888.jpeg') center/cover no-repeat;
         height: 100vh;
         background-attachment: scroll;
+    }
+}
+
+/* 首存优惠文字样式 */
+.bonus-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
     }
 }
