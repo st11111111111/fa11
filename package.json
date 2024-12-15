@@ -1,0 +1,13 @@
+{
+  "name": "fa11-landing",
+  "version": "1.0.0",
+  "description": "FA88 Landing Page",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
