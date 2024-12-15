@@ -29,4 +29,22 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.borderColor = this.value ? 'rgba(255, 215, 0, 0.5)' : 'rgba(255, 215, 0, 0.3)';
         });
     });
+
+    // 获取整个hero区域
+    const heroSection = document.querySelector('.hero');
+    
+    // 添加点击事件
+    heroSection.addEventListener('click', function() {
+        window.open('https://f568h.com/register?inviteCode=1j5aUQbP', '_blank');
+    });
+
+    // 为了避免重复触发，阻止注册按钮的事件冒泡
+    if (registerBtn) {
+        registerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    // 添加鼠标样式
+    heroSection.style.cursor = 'pointer';
 });
