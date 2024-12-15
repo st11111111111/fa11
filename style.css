@@ -41,15 +41,12 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/fa888.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fa888.jpeg') center/cover no-repeat fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 20px;
 }
 
 .hero::before {
@@ -75,13 +72,46 @@ body {
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--darker-bg);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-height: 50px;
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
 /* Navigation */
@@ -495,4 +525,30 @@ a {
     animation: glow 3s infinite;
     font-size: 3em;
     margin-bottom: 20px;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .logo-text {
+        font-size: 2rem;
+    }
+    
+    .register-btn {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        min-width: 180px;
+    }
+}
+
+/* 确保图片在移动端正确加载 */
+@media screen and (max-width: 480px) {
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fa888.jpeg') center/cover no-repeat;
+        height: 100vh;
+        background-attachment: scroll;
+    }
 }
